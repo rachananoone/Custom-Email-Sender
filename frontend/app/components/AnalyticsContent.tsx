@@ -70,7 +70,7 @@ export default function Analytics() {
         </div>
       </div>
 
-      <div className="mt-3 border rounded-md p-4">
+      <div className="mt-3 border rounded-md p-6">
         <div className="text-xl font-semibold mb-5">Email Tracking</div>
         <table className="w-full">
           <thead>
