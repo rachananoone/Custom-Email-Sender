@@ -10,6 +10,27 @@ export default function Analytics() {
     { name: 'Failed', value: 100 },
   ]
 
+  const tableData = [
+    {
+      "Company Name": "ABC Corp",
+      "Gmail": "contact@abccorp.com",
+      "Status": "Sent",
+      "Opened": "Yes"
+    },
+    {
+      "Company Name": "XYZ Ltd",
+      "Gmail": "info@xyzltd.co.uk",
+      "Status": "Scheduled",
+      "Opened": "N/A"
+    },
+    {
+      "Company Name": "DEF Inc",
+      "Gmail": "hello@definc.com",
+      "Status": "Failed",
+      "Opened": "No"
+    }
+  ];
+
   const [progress,setProgress]=useState(45);
 
   return (
@@ -47,6 +68,30 @@ export default function Analytics() {
             <div className="text-center font-semibold"> {progress}% Complete </div>
           </div>
         </div>
+      </div>
+
+      <div className="mt-3 border rounded-md p-4">
+        <div className="text-xl font-semibold mb-5">Email Tracking</div>
+        <table className="w-full">
+          <thead>
+            <tr className="text-left border-b shadow-sm">
+              <th className="py-3 text-slate-500 font-medium">Company name</th>
+              <th className="py-3 text-slate-500 font-medium">Gmail</th>
+              <th className="py-3 text-slate-500 font-medium">Status</th>
+              <th className="py-3 text-slate-500 font-medium">Opened</th>
+            </tr>
+          </thead>
+          <tbody>
+              {tableData.map((row)=>{
+                return <tr className="border-b shadow-sm p-2">
+                  <td className="py-3">{row["Company Name"]} </td>
+                  <td className="py-3"> {row.Gmail} </td>
+                  <td className="py-3">{row.Status} </td>
+                  <td className="py-3">{row.Opened} </td>
+                </tr>
+              })}
+          </tbody>
+        </table>
       </div>
     </div>
   )
