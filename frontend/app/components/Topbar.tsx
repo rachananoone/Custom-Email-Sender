@@ -30,7 +30,7 @@ export default function TopBar(){
     },[activeTab])
 
     return <div>
-        <div className="bg-gray-100 flex justify-around py-1 px-2 rounded-lg">
+        <div className="bg-gray-100 flex justify-around py-1.5 px-2 rounded-lg">
             {tabs.map((tab)=>{
                 return <button
                     key={tab}

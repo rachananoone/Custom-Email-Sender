@@ -19,12 +19,12 @@ export default function ScheduleContent() {
         <input 
           type='datetime-local'
           onChange={handleTimeChange}
-          className='w-full p-2 border rounded-md'
+          className='w-3/4 p-2 border rounded-md flex justify-start'
         ></input>
       </div>
       <div className='flex items-center gap-x-3 mt-4'>
         <Sliders className='size-4'></Sliders>
-        <input type='number' className='w-full p-2 border rounded-md' placeholder='Emails per hour'></input>
+        <input type='number' className='w-3/4 p-2 border rounded-md' placeholder='Emails per hour'></input>
       </div>
       <button 
         className='bg-gray-900 rounded-md text-white p-2 mt-7 mb-4'
